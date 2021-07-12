@@ -14,6 +14,19 @@ const getApiBlogs = () => {
     });
 };
 
+const getApiBlogsById = (id) => {
+  return request({
+    url: `${Urls.API_URL}blogs/${id}`,
+    method: "GET",
+  })
+    .then((res) => {
+      return res;
+    })
+    .catch((error) => {
+      return error.response;
+    });
+};
+
 const getApiPagination = (id, limit) => {
   return request({
     url: `${Urls.API_URL}blogs?page=${id}&limit=${limit}`,
@@ -54,4 +67,4 @@ const getApiSearch = (blog1) => {
 };
 
 
-export { getApiBlogs, getApiPagination, getApiSort, getApiSearch };
+export { getApiBlogs, getApiPagination, getApiSort, getApiSearch, getApiBlogsById };

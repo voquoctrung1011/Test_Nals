@@ -15,10 +15,24 @@
   clear: both;
   display: flex;
   margin: 2em auto;
+  color: black;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.btn-back {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
 }
 .mr-3 {
   width: 10%;
   height: 10%;
+  cursor: pointer;
   object-fit: cover;
 }
 .media-body {
@@ -26,10 +40,6 @@
   padding-left: 2em;
 }
 .media-body__container {
-  // position: relative;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
   top: 1em;
   position: relative;
 }
@@ -39,4 +49,8 @@
   .page-link {
     cursor: pointer;
   }
+}
+.detail-page {
+  text-align: center;
+  margin: 50px auto;
 }

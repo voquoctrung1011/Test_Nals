@@ -27,7 +27,8 @@ export const actions = {
 export const Pagination = (id) => (dispatch) => {
   getApiPagination(id, 10)
     .then(res => {
-      dispatch(actions.pagination(res.data));
+      if (res && res.status === 200)
+        dispatch(actions.pagination(res.data));
     })
     .catch(err => {
       console.log(err)
@@ -37,7 +38,8 @@ export const Pagination = (id) => (dispatch) => {
 export const Sort = (id, type) => (dispatch) => {
   getApiSort(id, type)
     .then(res => {
-      dispatch(actions.pagination(res.data));
+      if (res && res.status === 200)
+        dispatch(actions.pagination(res.data));
     })
     .catch(err => {
       console.log(err)
@@ -47,7 +49,8 @@ export const Sort = (id, type) => (dispatch) => {
 export const Search = (data) => (dispatch) => {
   getApiSearch(data)
     .then(res => {
-      dispatch(actions.pagination(res.data));
+      if (res && res.status === 200)
+        dispatch(actions.pagination(res.data));
     })
     .catch(err => {
       console.log(err)

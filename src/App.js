@@ -1,15 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import HomePage from "./container/homepage"
+import HomePage from "./layouts/index"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styles/home.scss";
+import history from "./util/history";
+import { Router } from 'react-router';
 
 
 function App() {
   return (
-    <div className="App">
+    <Router history={history}>
       <HomePage />
-    </div>
+    </Router>
   );
 }
 
